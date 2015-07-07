@@ -8,11 +8,12 @@ public class Trains implements Runnable {
 	public int speed;
 	
 	
-	public Trains(int startFrontLocation, int startBackLocation, int startSpeed) {
+	public Trains(int id, int frontLocation, int backLocation, int speed) {
 		
-		frontLocation = startFrontLocation;
-		backLocation = startBackLocation;
-		speed = startSpeed;
+		id = this.id;
+		frontLocation = this.frontLocation;
+		backLocation = this.backLocation;
+		speed = this.speed;
 		
 	}
 	
@@ -28,6 +29,10 @@ public class Trains implements Runnable {
 		speed -= decrement;
 	}
 	
+	/*
+	 * Method for stop, loop with the applyBrake method to simulate a stop.
+	 */
+	
 	public void speedUp(int increment) {
 		speed += increment;
 	}
@@ -36,6 +41,7 @@ public class Trains implements Runnable {
 	
 	Trains() {
 		
+		//Include logic to check present train id's and assign id's to new train 
 		newTrain = new Thread(this, "A new train");
 		System.out.println("New train created" + newTrain);
 		newTrain.start();
@@ -67,6 +73,8 @@ public class Trains implements Runnable {
 class testTrains {
 	
 	public static void main(String args[]) {
+		
+		//Basic thread testing to make sure they work. 
 		Trains train1 = new Trains();
 		
 		try {
