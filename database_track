@@ -1,0 +1,58 @@
+/*
+Database name: trains
+*/
+
+--create table script for tracks
+create table tracks (
+	trackid varchar(4),
+	pretrack1 varchar(4),
+	pretrack2 varchar(4),
+	posttrack1 varchar(4),
+	posttrack2 varchar(4),
+	isallocated varchar(1) default 'N',
+	isalive varchar(1) default 'Y'
+);
+
+--example insert for the first section of track
+insert into tracks (trackid, pretrack1, pretrack2, posttrack1, posttrack2) 
+values ('S1-1', null, null, 'S2-1', null);
+values ('s1-2', null, null, 'S2-2', null);
+values ('S1-3', null, null,' S2-3', null);
+values ('S1-4', null, null, 'S2-4', null);
+values ('S2-1', 'S1-1', null, 'S3-1', null);
+values ('S2-2', 'S1-2', null, 'S3-1', null);
+values ('S2-3', 'S1-3', null, 'S3-2', null);
+values ('S2-4', 'S1-4', null, 'S3-2', null);
+values ('S3-1', 'S2-1','S2-2', 'S4-1', null);
+values ('S3-2', 'S2-3', 'S2-4', 'S4-2', null);
+values ('S4-1', 'S3-1', null, 'S5-1', null);
+values ('S4-2', 'S3-2', null, 'S5-2', null);
+values ('S5-1', 'S4-1', null, 'S6-1', null);
+values ('S5-2', 'S4-2', null, 'S6-2', null);
+values ('S6-1', 'S5-1', null, 'S7-1', null);
+values ('S6-2', 'S5-2', null, 'S7-1', null);
+values ('S7-1', 'S6-1', 'S6-2', 'S8-1', 'S8-2');
+values ('S8-1', 'S7-1', null, 'S9-1', null);
+values ('S8-2', 'S7-1', null, 'S9-1', null);
+values ('S9-1', 'S8-1', 'S8-2', 'S10-1', 'S10-2');
+values ('S10-1', 'S9-1', null, 'S11-1', null);
+values ('S10-2', 'S9-1', null, 'S11-1', null);
+values ('S11-1', 'S10-1', 'S10-2', 'S12-1', null);
+values ('S12-1', 'S11-1', null, 'S18-1', null);
+values ('S18-1', 'S12-1', null, 'S19-1', 'S19-2');
+values ('S19-1', 'S18-1', null, 'S20-1', null);
+values ('S19-2', 'S18-1', null, 'S20-1, null');
+values ('S20-1', 'S19-1', 'S19-2', 'S21-1', null);
+values ('S21-1', 'S20-1', null, 'S22-1', 'S22-2');
+values ('S22-1', 'S21-1', null, 'S23-1', null);
+values ('S22-2', 'S21-1', null, 'S23-1', null);
+values ('S23-1', 'S22-1', 'S22-2', 'S24-1', 'S25-1');
+values ('S24-1', 'S23-1', null, 'S25-2','S25-3');
+values ('S25-1', 'S23-1', null, null, null);
+values ('S25-2', 'S24-1', null, 'S26-1', null);
+values ('S25-3', 'S24-1', null, 'S26-1', null);
+values ('S26-1', 'S25-2', 'S25-3', 'S27-1', null);
+values ('S27-1', 'S26-1', null, 'S28-1', null);
+values ('S28-1', 'S27-1', null, 'S29-1', 'S29-2');
+values ('S29-1', 'S28-1', null, null, null);
+values ('S29-2', 'S28-1', null, null,null);
