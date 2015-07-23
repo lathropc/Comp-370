@@ -4,7 +4,7 @@
   <jdbc>
     <driver>com.mysql.jdbc.Driver</driver>
     <url>jdbc:mysql://localhost:3306/trains</url>
-    <user>admin</user>
+    <user>root</user>
     <password></password>
   </jdbc>
 
@@ -20,7 +20,7 @@
 
       <!-- The database schema (or in the absence of schema support, in your RDBMS this
            can be the owner, user, database name) to be generated -->
-      <inputSchema>library</inputSchema>
+      <inputSchema>trains</inputSchema>
 
       <!-- All elements that are generated from your schema
            (A Java regular expression. Use the pipe to separate several expressions)
@@ -38,7 +38,7 @@
       <packageName>test.generated</packageName>
 
       <!-- The destination directory of your generated classes -->
-      <directory>C:/workspace/MySQLTest/src</directory>
+      <directory>C:\xampp\mysql\data\trains</directory>
     </target>
   </generator>
 </configuration>
