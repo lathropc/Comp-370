@@ -1,0 +1,18 @@
+--create table for stations
+create table switch (
+	stationid varchar(20),
+	trackid1 varchar(4),
+	trackid2 varchar(4),
+	trackid3 varchar(4),
+	trackid4 varchar(4),
+	isalive varchar(1) default 'Y'
+);
+
+--example insert for the first switch
+insert into tracks (stationid, trackid1, trackid2, trackid3, trackid4) 
+values ('Boston', 'S1-1', 'S1-2', 'S1-3', 'S1-4');
+values ('Alewife', 'S5-1', 'S5-2', null, null);
+values ('Meford', 'S10-1', 'S10-2', null ,null);
+values ('Melrose', 'S19-1', 'S19-2', null, null);
+values ('Stoneham', 'S25-1', 'S25-2', 'S25-3', null);
+values ('Reading', 'S29-1', 'S29-2');
