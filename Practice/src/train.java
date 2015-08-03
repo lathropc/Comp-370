@@ -1,5 +1,5 @@
 public class train {
-	final int id;
+	final String id;
 	int x;
 	int y;
 	//String frontLocation;
@@ -10,7 +10,7 @@ public class train {
 	Routine routine;
 	Tracks tracks;
 	
-	public train(int id, int x, int y, boolean isAlive, int speed) {
+	public train(String id, int x, int y, boolean isAlive, int speed) {
 		this.id = id;
 		this.x = x;
 		this.y = y;
@@ -64,7 +64,7 @@ public class train {
 		this.routine = routine;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 	
@@ -81,4 +81,6 @@ public class train {
 				", speed=" + speed +
 				'}';
 	}
+
+	
 }
