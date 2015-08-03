@@ -1,8 +1,7 @@
 package trains;
 public class train {
 	final String id;
-	int x;
-	int y;
+	String location;
 	// String frontLocation;
 	// String backLocation;
 	public boolean isAlive;
@@ -11,10 +10,10 @@ public class train {
 	Routine routine;
 	Tracks tracks;
 
-	public train(String id, int x, int y, boolean isAlive, int speed) {
+	public train(String id, String location, boolean isAlive, int speed) {
 		this.id = id;
-		this.x = x;
-		this.y = y;
+		this.location = location;
+		
 		// this.frontLocation = frontLocation;
 		// this.backLocation = backLocation;
 		this.isAlive = isAlive;
@@ -29,20 +28,12 @@ public class train {
 		routine.act(this, tracks);
 	}
 
-	public int getX() {
-		return x;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	public int getSpeed() {
@@ -75,7 +66,7 @@ public class train {
 
 	@Override
 	public String toString() {
-		return "Train{" + "id=" + id + ", x=" + x + ", y=" + y + ", speed="
+		return "Train{" + "id=" + id + ", location=" + location +  "speed="
 				+ speed + '}';
 	}
 

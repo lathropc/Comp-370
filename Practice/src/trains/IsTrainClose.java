@@ -24,7 +24,6 @@ public class IsTrainClose extends Routine {
 	}
 
 	private boolean isApproaching(train train, train otherTrain) {
-		return (Math.abs(train.getX() - otherTrain.getX()) <= 1 || Math
-				.abs(train.getY() - otherTrain.getY()) < 1);
+		return (train.getLocation() == otherTrain.getLocation());
 	}
 }

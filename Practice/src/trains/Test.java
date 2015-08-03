@@ -5,7 +5,7 @@ public class Test {
 
 		Tracks tracks = new Tracks(10, 10);
 
-		train train = new train("First Train", 5, 5, true, 0);
+		train train = new train("First Train", "S1-1", true, 0);
 		tracks.addTrain(train);
 
 		Routine routine = new Repeat((new RandomRoute(tracks)));
@@ -13,7 +13,7 @@ public class Test {
 		System.out.println(train);
 
 		for (int i = 0; i < 5; i++) {
-			train.update();
+			train.update(); 
 			System.out.println(train);
 		}
 	}

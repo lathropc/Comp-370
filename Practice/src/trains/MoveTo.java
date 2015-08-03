@@ -1,13 +1,11 @@
 package trains;
 public class MoveTo extends Routine {
 
-	final protected int destX;
-	final protected int destY;
+	final protected String destination;
 
-	public MoveTo(int destX, int destY) {
+	public MoveTo(String destination) {
 		super();
-		this.destX = destX;
-		this.destY = destY;
+		this.destination = destination;
 	}
 
 	public void reset() {
@@ -28,26 +26,10 @@ public class MoveTo extends Routine {
 	}
 
 	private void moveTrain(train train) {
-		if (destY != train.getY()) {
-			if (destY > train.getY()) {
-				train.setY(train.getY() + 1);
-			} else {
-				train.setY(train.getY() - 1);
-			}
-		}
-		if (destX != train.getX()) {
-			if (destX > train.getX()) {
-				train.setX(train.getX() + 1);
-			} else {
-				train.setX(train.getX() - 1);
-			}
-		}
-		if (isTrainAtDestination(train)) {
-			succeed();
-		}
+		//shit to move trains
 	}
 
 	private boolean isTrainAtDestination(train train) {
-		return destX == train.getX() && destY == train.getY();
+		return destination == train.getLocation();
 	}
 }

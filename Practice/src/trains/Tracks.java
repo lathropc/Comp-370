@@ -23,15 +23,15 @@ public class Tracks {
 	}
 
 	public void addTrain(train train) {
-		if (isTrackMoveable(train.getX(), train.getY())) {
+		if (isTrackMoveable(train.getLocation())) {
 			trains.add(train);
 			train.setTracks(this);
 		}
 	}
 
-	public boolean isTrackMoveable(int x, int y) {
+	public boolean isTrackMoveable(String location) {
 		for (train train : trains) {
-			if (train.getX() == x && train.getY() == y) {
+			if (train.getLocation() == location) {
 				return false;
 			}
 		}
