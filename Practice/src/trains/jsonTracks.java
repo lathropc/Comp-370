@@ -11,18 +11,16 @@ public class jsonTracks {
     JsonParsetrack_data jsonParsetrack_data = new Gson().fromJson(json, JsonParsetrack_data.class);
 
     public void setupData() {
-    	System.out.println("IN MAIN");
     	
         if (jsonParsetrack_data != null && jsonParsetrack_data.getData() != null) {
             for (Track_data data : jsonParsetrack_data.getData()) {
                 System.out.println(TAG + "Track_data: " + data.toString());
             }
-        }
-        else{
+        } else{
         	System.out.println("Data is shit");
         }
         
-        System.out.println("First track id: " + jsonParsetrack_data.data.get(0).getTrack().getTrackId());
+        System.out.println("First track id: " + jsonParsetrack_data.data.get(0).getTrack().gettrackid());
         
     }
 
@@ -104,10 +102,10 @@ public class jsonTracks {
             this.isalive = isalive;
         }
 
-        public String getTrackId() {
+        public String gettrackid() {
             return trackid;
         }
-        public void setTrackId(String trackid) {
+        public void settrackid(String trackid) {
             this.trackid = trackid;
         }
         public String getpretrack1() {

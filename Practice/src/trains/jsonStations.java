@@ -4,27 +4,27 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
+
 public class jsonStations {
 	
 	public static final String TAG = jsonStations.class.getSimpleName();
+	String json = "{results:[{\"track\":{\"supplier_catalog_id\": \"139\",\"distributor_id\": \"57\",\"distributor_asking_price\": \"999.99\",\"supplier_id\": null,\"product_name\": \"jjjjjjjj j j j j j j  jj j jjjjjjjjjjjj\",\"product_description\": \"kkkkkkkkkkkkkk k k  k k\"},\"image_details\": {\"isCustomImageProvided\": 0,\"isImageUploadedTo\": 1}}]}";
+	JsonParsestations_data jsonParsestations_data = new Gson().fromJson(json, JsonParsestations_data.class);
 	
-	public static void main() {
-		
-		String json = "{results:[{\"track\":{\"supplier_catalog_id\": \"139\",\"distributor_id\": \"57\",\"distributor_asking_price\": \"999.99\",\"supplier_id\": null,\"product_name\": \"jjjjjjjj j j j j j j  jj j jjjjjjjjjjjj\",\"product_description\": \"kkkkkkkkkkkkkk k k  k k\"},\"image_details\": {\"isCustomImageProvided\": 0,\"isImageUploadedTo\": 1}}]}";
-		
-		JsonParsestations_data jsonParsestations_data = new Gson().fromJson(json, JsonParsestations_data.class);
-
-        if (jsonParsestations_data != null && jsonParsestations_data.getData() != null) {
+	public void setupData() {
+       
+		if (jsonParsestations_data != null && jsonParsestations_data.getData() != null) {
             for (Station_data data : jsonParsestations_data.getData()) {
                 System.out.println(TAG + "Station_data: " + data.toString());
             }
+        } else {
+        	System.out.println("Station data is borked");
         }
 	}
 	
 	public class JsonParsestations_data {
 		
-		@SerializedName("station_data")
-        private List<Station_data> data;
+		@SerializedName("station_data") List<Station_data> data;
 
         public JsonParsestations_data(List<Station_data> data) {
             super();
