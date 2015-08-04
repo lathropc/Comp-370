@@ -4,9 +4,9 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
-public class jsonParse {
+public class jsonTracks {
 
-    public static final String TAG = jsonParse.class.getSimpleName();
+    public static final String TAG = jsonTracks.class.getSimpleName();
 
     public static void main() {
 
@@ -104,23 +104,49 @@ public class jsonParse {
         public String getTrackId() {
             return trackid;
         }
-
         public void setTrackId(String trackid) {
             this.trackid = trackid;
         }
-
         public String getpretrack1() {
             return pretrack1;
         }
-
         public void setpretrack1(String pretrack1) {
             this.pretrack1 = pretrack1;
         }
-
+        public String getpretrack2(){
+        	return pretrack2;
+        }
+        public void setpretrack2(String pretrack2){
+        	this.pretrack2 = pretrack2;
+        }
+        public String getposttrack1(){
+        	return posttrack1;
+        }
+        public void setposttrack1(String posttrack1){
+        	this.posttrack1 = posttrack1;
+        }
+        public String getposttrack2(){
+        	return posttrack2;
+        }
+        public void setposttrack2(String posttrack2){
+        	this.posttrack2 = posttrack2;
+        }
+        public boolean getisallocated(){
+        	return isallocated;
+        }
+        public void setisallocated(boolean isallocated){
+        	this.isallocated = isallocated;
+        }
+        public boolean getisalive(){
+        	return isalive;
+        }
+        public void setisalive(boolean isalive){
+        	this.isalive = isalive;
+        }
 
         @Override
         public String toString() {
-            return "track [  ]";
+            return "track [trackid =" + trackid + "pretrack1 =" + pretrack1 + "pretrack2 =" + pretrack2 + "posttrack1 =" + posttrack1 + "posttrack2 =" + posttrack2 + "isallocated =" +isallocated + "isalive = " + isalive + "]";
         }
 
     }
