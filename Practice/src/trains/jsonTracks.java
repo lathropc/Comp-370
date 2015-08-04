@@ -7,12 +7,12 @@ import com.google.gson.annotations.SerializedName;
 public class jsonTracks {
 
     public static final String TAG = jsonTracks.class.getSimpleName();
+    String json = "{tracks:[{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}}]}";
+    JsonParsetrack_data jsonParsetrack_data = new Gson().fromJson(json, JsonParsetrack_data.class);
 
     public void setupData() {
     	System.out.println("IN MAIN");
-    	String json = "{tracks:[{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}}]}";
-        JsonParsetrack_data jsonParsetrack_data = new Gson().fromJson(json, JsonParsetrack_data.class);
-
+    	
         if (jsonParsetrack_data != null && jsonParsetrack_data.getData() != null) {
             for (Track_data data : jsonParsetrack_data.getData()) {
                 System.out.println(TAG + "Track_data: " + data.toString());
@@ -28,8 +28,7 @@ public class jsonTracks {
 
     public class JsonParsetrack_data {
 
-        @SerializedName("tracks")
-        private List<Track_data> data;
+        @SerializedName("tracks") List<Track_data> data;
 
         public JsonParsetrack_data(List<Track_data> data) {
             super();
