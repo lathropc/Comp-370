@@ -8,7 +8,7 @@ public class jsonTracks {
 
     public static final String TAG = jsonTracks.class.getSimpleName();
 
-    public static void main(String[] args) {
+    public void setupData() {
     	System.out.println("IN MAIN");
     	String json = "{tracks:[{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}}]}";
         JsonParsetrack_data jsonParsetrack_data = new Gson().fromJson(json, JsonParsetrack_data.class);
@@ -21,6 +21,9 @@ public class jsonTracks {
         else{
         	System.out.println("Data is shit");
         }
+        
+        System.out.println("First track id: " + jsonParsetrack_data.data.get(0).getTrack().getTrackId());
+        
     }
 
     public class JsonParsetrack_data {
