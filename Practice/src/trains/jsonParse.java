@@ -4,7 +4,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
-public class jasonParse {
+public class jsonParse {
 
     public static final String TAG = jsonParse.class.getSimpleName();
 
