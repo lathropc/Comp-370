@@ -1,10 +1,6 @@
 package trains;
 
 import java.util.List;
-
-import trains.jsonParse.JsonParsetrack_data;
-import trains.jsonParse.Track_data;
-
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
