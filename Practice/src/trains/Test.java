@@ -1,5 +1,9 @@
 package trains;
 
+//TODO all setters must be immutable
+//TODO safety on all set/get
+//TODO add :switch location
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -9,12 +13,10 @@ public class Test {
 		train train = new train("First Train", "S1-1", true, 0);
 		tracks.addTrain(train);
 		
-		jsonTracks jsonTracks = new jsonTracks();
-		jsonTracks.setupData();  //loads data into track_data objects. prints them
-	    
-		System.out.println(jsonTracks.jsonParsetrack_data.data.get(0).getTrack().getTrackId());
-		//for (Track_data data : jsonParsetrack_data.getData()){}
-		//System.out.println(jsonTracks.track.getTrackId());
-
+		faultLayer faultLayer = new faultLayer();
+		faultLayer.setupTracks();
+		faultLayer.setupSwitches();
+		faultLayer.setupStations();
+		
 	}
 }
