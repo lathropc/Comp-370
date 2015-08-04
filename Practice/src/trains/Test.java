@@ -8,7 +8,7 @@ public class Test {
 		train train = new train("First Train", "S1-1", true, 0);
 		tracks.addTrain(train);
 
-		Routine routine = new Repeat((new RandomRoute(tracks)));
+		Routine routine = new Repeat(tracks);
 		train.setRoutine(routine);
 		System.out.println(train);
 

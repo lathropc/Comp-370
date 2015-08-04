@@ -1,7 +1,12 @@
 package trains;
+
+import com.google.gson.Gson;
+
 public class MoveTo extends Routine {
 
 	final protected String destination;
+	
+	Gson gson = new Gson();
 
 	public MoveTo(String destination) {
 		super();
@@ -27,6 +32,10 @@ public class MoveTo extends Routine {
 
 	private void moveTrain(train train) {
 		//shit to move trains
+		if (train.getLocation() == null) {
+			
+		}
+		
 	}
 
 	private boolean isTrainAtDestination(train train) {
