@@ -8,11 +8,9 @@ public class jsonTracks {
 
     public static final String TAG = jsonTracks.class.getSimpleName();
 
-    public static void main() {
-
-
-        String json = "{results:[{\"track\":{\"supplier_catalog_id\": \"139\",\"distributor_id\": \"57\",\"distributor_asking_price\": \"999.99\",\"supplier_id\": null,\"product_name\": \"jjjjjjjj j j j j j j  jj j jjjjjjjjjjjj\",\"product_description\": \"kkkkkkkkkkkkkk k k  k k\"},\"image_details\": {\"isCustomImageProvided\": 0,\"isImageUploadedTo\": 1}}]}";
-
+    public static void main(String[] args) {
+    	System.out.println("IN MAIN");
+    	String json = "{tracks:[{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"track\":{\"trackid\": \"S1-1\",\"pretrack1\": \"null\",\"pretrack2\": \"null\",\"posttrack1\": \"S2-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}}]}";
         JsonParsetrack_data jsonParsetrack_data = new Gson().fromJson(json, JsonParsetrack_data.class);
 
         if (jsonParsetrack_data != null && jsonParsetrack_data.getData() != null) {
@@ -20,11 +18,14 @@ public class jsonTracks {
                 System.out.println(TAG + "Track_data: " + data.toString());
             }
         }
+        else{
+        	System.out.println("Data is shit");
+        }
     }
 
     public class JsonParsetrack_data {
 
-        @SerializedName("track_data")
+        @SerializedName("tracks")
         private List<Track_data> data;
 
         public JsonParsetrack_data(List<Track_data> data) {
@@ -62,7 +63,7 @@ public class jsonTracks {
 
         @Override
         public String toString() {
-            return "Track_data [tracks=" + tracks + "]";
+            return "Track_data [tracks= " + tracks + "]";
         }
 
     }
@@ -146,9 +147,10 @@ public class jsonTracks {
 
         @Override
         public String toString() {
-            return "track [trackid =" + trackid + "pretrack1 =" + pretrack1 + "pretrack2 =" + pretrack2 + "posttrack1 =" + posttrack1 + "posttrack2 =" + posttrack2 + "isallocated =" +isallocated + "isalive = " + isalive + "]";
+            return "track [trackid = " + trackid + " pretrack1 = " + pretrack1 + " pretrack2 = " + pretrack2 + " posttrack1 = " + posttrack1 + " posttrack2 = " + posttrack2 + " isallocated = " +isallocated + " isalive = " + isalive + "]";
         }
 
     }
 
 }
+
