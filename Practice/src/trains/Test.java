@@ -12,6 +12,7 @@ public class Test {
 		jsonTracks jsonTracks = new jsonTracks();
 		jsonTracks.setupData();  //loads data into track_data objects. prints them
 	    
+		System.out.println(jsonTracks.jsonParsetrack_data.data.get(0).getTrack().getTrackId());
 		//for (Track_data data : jsonParsetrack_data.getData()){}
 		//System.out.println(jsonTracks.track.getTrackId());
 
