@@ -1,73 +1,133 @@
 package trains;
 public class train {
-	final String id;
-	String location;
-	// String frontLocation;
-	// String backLocation;
+	public String id;
+	public String location;
 	public boolean isAlive;
-	int speed;
+	public String destination;
+	
+	faultLayer faultLayer;
 
-	Routine routine;
-	Tracks tracks;
-
-	public train(String id, String location, boolean isAlive, int speed) {
-		this.id = id;
-		this.location = location;
+	public train(String id, String location, boolean isAlive, String destination) {
 		
-		// this.frontLocation = frontLocation;
-		// this.backLocation = backLocation;
-		this.isAlive = isAlive;
-		this.speed = speed;
-	}
-
-	public void update() {
-		if (routine.getState() == null) {
-			// hasn't stated yet so we start it
-			routine.start();
+		this.id = id;
+		
+		if(faultLayer.getTrackisallocated(location) == false) {
+			this.location = location;
 		}
-		routine.act(this, tracks);
+		
+		this.isAlive = isAlive;
+		
+		if(faultLayer.getTrackisallocated(destination) == false) {
+			this.destination = destination;
+		}
+		
 	}
 
 	public String getLocation() {
-		return location;
+		return faultLayer.gettrackid();
 	}
 
 	public void setLocation(String location) {
-		this.location = location;
-	}
 
-	public int getSpeed() {
-		return speed;
+		if(faultLayer.getTrackisallocated(location) == false) {
+			faultLayer.setTrackisallocated(location) == true;
+		}
 	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	
+	public String getDestination() {
+		return destination;
+	}
+	
+	public void setDestination(String destination) {
+		
+		String track1 = faultLayer.getStationtrackid1(destination);
+		String track2 = faultLayer.getStationtrackid2(destination);
+		String track3 = faultLayer.getStationtrackid3(destination);
+		String track4 = faultLayer.getStationtrackid4(destination);
+		
+		
+		if(faultLayer.getTrackisallocated(track1) == true) {
+			if(faultLayer.getTrackisallocated(track2) == true) {
+				if(track3 != null) {
+					if(faultLayer.getTrackisallocated(track3) == true) {
+						if(track4 != null) {
+							if(faultLayer.getTrackisallocated(track4) == true) {
+								//wait
+							} else {
+								/faultLayer.setTrackisallocated(track4) = true;
+							}
+						} else {
+							//wait
+						}
+					} else {
+						faultLayer.setTrackisallocated(track3) = true;
+					}
+				} else {
+					//wait
+				}
+			} else {
+				faultLayer.setTrackisallocated(track2) = true;
+			}
+		} else {
+			faultLayer.setTrackisallocated(track1) = true;
+		}
 	}
 
 	public boolean isAlive() {
 		return true;
 	}
-
-	public Routine getRoutine() {
-		return getRoutine();
-	}
-
-	public void setRoutine(Routine routine) {
-		this.routine = routine;
+	
+	public void setisAlive(boolean isAlive) {
+		this.isAlive = isAlive;
 	}
 
 	public String getId() {
 		return id;
 	}
-
-	public void setTracks(Tracks tracks) {
-		this.tracks = tracks;
+	
+	public void setId(String id) {
+		this.id = id;
 	}
-
+	
+	public String getPretrack1() {
+		return faultLayer.getTrackpretrack1(location);
+	}
+	
+	public String getPretrack2() {
+		return faultLayer.getTrackpretrack2(location);
+	}
+	
+	public String getPosttrack1(String newLocation) {
+		return faultLayer.getTrackposttrack1(newLocation);
+	}
+	
+	public String getPosttrack2(String newLocation) {
+		return faultLayer.getTrackposttrack1(newLocation);
+	}
+	
+	public void planPath() {
+		
+		String nextLocation = location;
+		
+		if((getPosttrack1(nextLocation) != getDestination()) && (getPosttrack2(nextLocation) != getDestination())) {
+			
+			nextLocation = getPosttrack1(nextLocation);
+			
+			if((getPosttrack1(nextLocation) != getDestination()) && (getPosttrack2(nextLocation) != getDestination())) {
+				
+			}
+		}
+	}
+	
 	@Override
 	public String toString() {
-		return "Train{" + "id=" + id + ", location=" + location +  "speed="
-				+ speed + '}';
+		return "train [id=" + id + ", location=" + location + ", isAlive="
+				+ isAlive + ", destination=" + destination + "]";
+	}
+
+	public static void main(String[] args) {
+		train train = new train("Train1", "S1-1", true, "S1-2");
+		System.out.println(train.toString());
 	}
 
 }
