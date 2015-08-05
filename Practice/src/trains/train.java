@@ -1,10 +1,6 @@
 package trains;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-
-import javax.xml.soap.Node;
 
 public class train {
 	
@@ -13,17 +9,20 @@ public class train {
 	public boolean isAlive;
 	public String destination;
 	
-	faultLayer faultLayer;
+	faultLayer faultLayer = new faultLayer();
 
 	public train(String id, String location, boolean isAlive, String destination) {
-		
+		System.out.println("We here 1");
 		this.id = id;
 		
-		if(faultLayer.getTrackisallocated(location) == false) {
-			this.location = location;
-			faultLayer.setTrackisallocated(location, true);
-		}
-		
+		System.out.println(faultLayer.getTrackisallocated("S1-1"));
+
+//		if(faultLayer.getTrackisallocated(location) == false) {
+//			this.location = location;
+//			faultLayer.setTrackisallocated(location, true);
+//		}
+		System.out.println("We here 2");
+
 		this.isAlive = isAlive;
 		
 		if(faultLayer.getTrackisallocated(destination) == false) {
@@ -123,6 +122,7 @@ public class train {
 		//first
 		if(getPosttrack1(location) != destination) {
 			path = getPosttrack1(location);
+			System.out.println(getPosttrack1(location));
 			correctPath.add(path);
 			if(getPosttrack1(path) != destination) {
 				path = getPosttrack1(path);
@@ -376,6 +376,342 @@ public class train {
 																																																																																	if(getPosttrack2(path) != destination) {
 																																																																																		correctPath.clear();
 																																																																																		
+																																																																																		//first
+																																																																																		if(getPosttrack2(location) != destination) {
+																																																																																			path = getPosttrack2(location);
+																																																																																			correctPath.add(path);
+																																																																																			if(getPosttrack1(path) != destination) {
+																																																																																				path = getPosttrack1(path);
+																																																																																				correctPath.add(path);
+																																																																																				if(getPosttrack1(path) != destination) {
+																																																																																					path = getPosttrack1(path);
+																																																																																					correctPath.add(path);
+																																																																																					if(getPosttrack1(path) != destination) {
+																																																																																						path = getPosttrack1(path);
+																																																																																						correctPath.add(path);
+																																																																																						if(getPosttrack1(path) != destination) {
+																																																																																							correctPath.clear();
+																																																																																							
+																																																																																							//second
+																																																																																							if(getPosttrack2(location) != destination) {
+																																																																																								path = getPosttrack2(location);
+																																																																																								correctPath.add(path);
+																																																																																								if(getPosttrack1(path) != destination) {
+																																																																																									path = getPosttrack1(path);
+																																																																																									correctPath.add(path);
+																																																																																									if(getPosttrack1(path) != destination) {
+																																																																																										path = getPosttrack1(path);
+																																																																																										correctPath.add(path);
+																																																																																										if(getPosttrack1(path) != destination) {
+																																																																																											path = getPosttrack1(path);
+																																																																																											correctPath.add(path);
+																																																																																											if(getPosttrack2(path) != destination) {
+																																																																																												correctPath.clear();
+																																																																																												
+																																																																																												//third
+																																																																																												if(getPosttrack2(location) != destination) {
+																																																																																													path = getPosttrack2(location);
+																																																																																													correctPath.add(path);
+																																																																																													if(getPosttrack1(path) != destination) {
+																																																																																														path = getPosttrack1(path);
+																																																																																														correctPath.add(path);
+																																																																																														if(getPosttrack1(path) != destination) {
+																																																																																															path = getPosttrack1(path);
+																																																																																															correctPath.add(path);
+																																																																																															if(getPosttrack2(path) != destination) {
+																																																																																																path = getPosttrack2(path);
+																																																																																																correctPath.add(path);
+																																																																																																if(getPosttrack1(path) != destination) {
+																																																																																																	correctPath.clear();
+																																																																																																	
+																																																																																																	//fourth
+																																																																																																	if(getPosttrack2(location) != destination) {
+																																																																																																		path = getPosttrack2(location);
+																																																																																																		correctPath.add(path);
+																																																																																																		if(getPosttrack1(path) != destination) {
+																																																																																																			path = getPosttrack1(path);
+																																																																																																			correctPath.add(path);
+																																																																																																			if(getPosttrack1(path) != destination) {
+																																																																																																				path = getPosttrack1(path);
+																																																																																																				correctPath.add(path);
+																																																																																																				if(getPosttrack2(path) != destination) {
+																																																																																																					path = getPosttrack2(path);
+																																																																																																					correctPath.add(path);
+																																																																																																					if(getPosttrack2(path) != destination) {
+																																																																																																						correctPath.clear();
+																																																																																																						
+																																																																																																						//fifth
+																																																																																																						if(getPosttrack2(location) != destination) {
+																																																																																																							path = getPosttrack2(location);
+																																																																																																							correctPath.add(path);
+																																																																																																							if(getPosttrack1(path) != destination) {
+																																																																																																								path = getPosttrack1(path);
+																																																																																																								correctPath.add(path);
+																																																																																																								if(getPosttrack2(path) != destination) {
+																																																																																																									path = getPosttrack2(path);
+																																																																																																									correctPath.add(path);
+																																																																																																									if(getPosttrack1(path) != destination) {
+																																																																																																										path = getPosttrack1(path);
+																																																																																																										correctPath.add(path);
+																																																																																																										if(getPosttrack1(path) != destination) {
+																																																																																																											correctPath.clear();
+																																																																																																											
+																																																																																																											//sixth
+																																																																																																											if(getPosttrack2(location) != destination) {
+																																																																																																												path = getPosttrack2(location);
+																																																																																																												correctPath.add(path);
+																																																																																																												if(getPosttrack1(path) != destination) {
+																																																																																																													path = getPosttrack1(path);
+																																																																																																													correctPath.add(path);
+																																																																																																													if(getPosttrack2(path) != destination) {
+																																																																																																														path = getPosttrack2(path);
+																																																																																																														correctPath.add(path);
+																																																																																																														if(getPosttrack1(path) != destination) {
+																																																																																																															path = getPosttrack1(path);
+																																																																																																															correctPath.add(path);
+																																																																																																															if(getPosttrack2(path) != destination) {
+																																																																																																																correctPath.clear();
+																																																																																																																
+																																																																																																																//seventh
+																																																																																																																if(getPosttrack2(location) != destination) {
+																																																																																																																	path = getPosttrack2(location);
+																																																																																																																	correctPath.add(path);
+																																																																																																																	if(getPosttrack1(path) != destination) {
+																																																																																																																		path = getPosttrack1(path);
+																																																																																																																		correctPath.add(path);
+																																																																																																																		if(getPosttrack2(path) != destination) {
+																																																																																																																			path = getPosttrack2(path);
+																																																																																																																			correctPath.add(path);
+																																																																																																																			if(getPosttrack2(path) != destination) {
+																																																																																																																				path = getPosttrack2(path);
+																																																																																																																				correctPath.add(path);
+																																																																																																																				if(getPosttrack1(path) != destination) {
+																																																																																																																					correctPath.clear();
+																																																																																																																					
+																																																																																																																					//eight
+																																																																																																																					if(getPosttrack2(location) != destination) {
+																																																																																																																						path = getPosttrack2(location);
+																																																																																																																						correctPath.add(path);
+																																																																																																																						if(getPosttrack1(path) != destination) {
+																																																																																																																							path = getPosttrack1(path);
+																																																																																																																							correctPath.add(path);
+																																																																																																																							if(getPosttrack2(path) != destination) {
+																																																																																																																								path = getPosttrack2(path);
+																																																																																																																								correctPath.add(path);
+																																																																																																																								if(getPosttrack2(path) != destination) {
+																																																																																																																									path = getPosttrack2(path);
+																																																																																																																									correctPath.add(path);
+																																																																																																																									if(getPosttrack2(path) != destination) {
+																																																																																																																										correctPath.clear();
+																																																																																																																										
+																																																																																																																										//nine
+																																																																																																																										if(getPosttrack2(location) != destination) {
+																																																																																																																											path = getPosttrack2(location);
+																																																																																																																											correctPath.add(path);
+																																																																																																																											if(getPosttrack2(path) != destination) {
+																																																																																																																												path = getPosttrack2(path);
+																																																																																																																												correctPath.add(path);
+																																																																																																																												if(getPosttrack1(path) != destination) {
+																																																																																																																													path = getPosttrack1(path);
+																																																																																																																													correctPath.add(path);
+																																																																																																																													if(getPosttrack1(path) != destination) {
+																																																																																																																														path = getPosttrack1(path);
+																																																																																																																														correctPath.add(path);
+																																																																																																																														if(getPosttrack1(path) != destination) {
+																																																																																																																															correctPath.clear();
+																																																																																																																															
+																																																																																																																															//ten
+																																																																																																																															if(getPosttrack2(location) != destination) {
+																																																																																																																																path = getPosttrack2(location);
+																																																																																																																																correctPath.add(path);
+																																																																																																																																if(getPosttrack2(path) != destination) {
+																																																																																																																																	path = getPosttrack2(path);
+																																																																																																																																	correctPath.add(path);
+																																																																																																																																	if(getPosttrack1(path) != destination) {
+																																																																																																																																		path = getPosttrack1(path);
+																																																																																																																																		correctPath.add(path);
+																																																																																																																																		if(getPosttrack1(path) != destination) {
+																																																																																																																																			path = getPosttrack1(path);
+																																																																																																																																			correctPath.add(path);
+																																																																																																																																			if(getPosttrack2(path) != destination) {
+																																																																																																																																				correctPath.clear();
+																																																																																																																																				
+																																																																																																																																				//eleven
+																																																																																																																																				if(getPosttrack2(location) != destination) {
+																																																																																																																																					path = getPosttrack2(location);
+																																																																																																																																					correctPath.add(path);
+																																																																																																																																					if(getPosttrack2(path) != destination) {
+																																																																																																																																						path = getPosttrack2(path);
+																																																																																																																																						correctPath.add(path);
+																																																																																																																																						if(getPosttrack1(path) != destination) {
+																																																																																																																																							path = getPosttrack1(path);
+																																																																																																																																							correctPath.add(path);
+																																																																																																																																							if(getPosttrack2(path) != destination) {
+																																																																																																																																								path = getPosttrack2(path);
+																																																																																																																																								correctPath.add(path);
+																																																																																																																																								if(getPosttrack1(path) != destination) {
+																																																																																																																																									correctPath.clear();
+																																																																																																																																									
+																																																																																																																																									//twelve
+																																																																																																																																									if(getPosttrack2(location) != destination) {
+																																																																																																																																										path = getPosttrack2(location);
+																																																																																																																																										correctPath.add(path);
+																																																																																																																																										if(getPosttrack2(path) != destination) {
+																																																																																																																																											path = getPosttrack2(path);
+																																																																																																																																											correctPath.add(path);
+																																																																																																																																											if(getPosttrack1(path) != destination) {
+																																																																																																																																												path = getPosttrack1(path);
+																																																																																																																																												correctPath.add(path);
+																																																																																																																																												if(getPosttrack2(path) != destination) {
+																																																																																																																																													path = getPosttrack2(path);
+																																																																																																																																													correctPath.add(path);
+																																																																																																																																													if(getPosttrack2(path) != destination) {
+																																																																																																																																														correctPath.clear();
+																																																																																																																																														
+																																																																																																																																														//thirteen
+																																																																																																																																														if(getPosttrack2(location) != destination) {
+																																																																																																																																															path = getPosttrack2(location);
+																																																																																																																																															correctPath.add(path);
+																																																																																																																																															if(getPosttrack2(path) != destination) {
+																																																																																																																																																path = getPosttrack2(path);
+																																																																																																																																																correctPath.add(path);
+																																																																																																																																																if(getPosttrack2(path) != destination) {
+																																																																																																																																																	path = getPosttrack2(path);
+																																																																																																																																																	correctPath.add(path);
+																																																																																																																																																	if(getPosttrack1(path) != destination) {
+																																																																																																																																																		path = getPosttrack1(path);
+																																																																																																																																																		correctPath.add(path);
+																																																																																																																																																		if(getPosttrack1(path) != destination) {
+																																																																																																																																																			correctPath.clear();
+																																																																																																																																																			
+																																																																																																																																																			//fourteen
+																																																																																																																																																			if(getPosttrack2(location) != destination) {
+																																																																																																																																																				path = getPosttrack2(location);
+																																																																																																																																																				correctPath.add(path);
+																																																																																																																																																				if(getPosttrack2(path) != destination) {
+																																																																																																																																																					path = getPosttrack2(path);
+																																																																																																																																																					correctPath.add(path);
+																																																																																																																																																					if(getPosttrack2(path) != destination) {
+																																																																																																																																																						path = getPosttrack2(path);
+																																																																																																																																																						correctPath.add(path);
+																																																																																																																																																						if(getPosttrack1(path) != destination) {
+																																																																																																																																																							path = getPosttrack1(path);
+																																																																																																																																																							correctPath.add(path);
+																																																																																																																																																							if(getPosttrack2(path) != destination) {
+																																																																																																																																																								correctPath.clear();
+																																																																																																																																																								
+																																																																																																																																																								//fifteen
+																																																																																																																																																								if(getPosttrack2(location) != destination) {
+																																																																																																																																																									path = getPosttrack2(location);
+																																																																																																																																																									correctPath.add(path);
+																																																																																																																																																									if(getPosttrack2(path) != destination) {
+																																																																																																																																																										path = getPosttrack2(path);
+																																																																																																																																																										correctPath.add(path);
+																																																																																																																																																										if(getPosttrack2(path) != destination) {
+																																																																																																																																																											path = getPosttrack2(path);
+																																																																																																																																																											correctPath.add(path);
+																																																																																																																																																											if(getPosttrack2(path) != destination) {
+																																																																																																																																																												path = getPosttrack2(path);
+																																																																																																																																																												correctPath.add(path);
+																																																																																																																																																												if(getPosttrack1(path) != destination) {
+																																																																																																																																																													correctPath.clear();
+																																																																																																																																																													
+																																																																																																																																																													//sixteen
+																																																																																																																																																													if(getPosttrack2(location) != destination) {
+																																																																																																																																																														path = getPosttrack2(location);
+																																																																																																																																																														correctPath.add(path);
+																																																																																																																																																														if(getPosttrack2(path) != destination) {
+																																																																																																																																																															path = getPosttrack2(path);
+																																																																																																																																																															correctPath.add(path);
+																																																																																																																																																															if(getPosttrack2(path) != destination) {
+																																																																																																																																																																path = getPosttrack2(path);
+																																																																																																																																																																correctPath.add(path);
+																																																																																																																																																																if(getPosttrack2(path) != destination) {
+																																																																																																																																																																	path = getPosttrack2(path);
+																																																																																																																																																																	correctPath.add(path);
+																																																																																																																																																																	if(getPosttrack2(path) != destination) {
+																																																																																																																																																																		correctPath.clear();
+																																																																																																																																																																		System.out.println("Something is wrong");
+																																																																																																																																																																		} else {return;}
+																																																																																																																																																																	} else {return;}
+																																																																																																																																																																} else {return;}
+																																																																																																																																																															} else {return;}
+																																																																																																																																																														} else {return;}
+																																																																																																																																																													} else {return;}
+																																																																																																																																																												} else {return;}
+																																																																																																																																																											} else {return;}
+																																																																																																																																																										} else {return;}
+																																																																																																																																																									} else {return;}
+																																																																																																																																																								} else {return;}
+																																																																																																																																																							} else {return;}
+																																																																																																																																																						} else {return;}
+																																																																																																																																																					} else {return;}
+																																																																																																																																																				} else {return;}
+																																																																																																																																																			} else {return;}
+																																																																																																																																																		} else {return;}
+																																																																																																																																																	} else {return;}
+																																																																																																																																																} else {return;}
+																																																																																																																																															} else {return;}
+																																																																																																																																														} else {return;}
+																																																																																																																																													} else {return;}
+																																																																																																																																												} else {return;}
+																																																																																																																																											} else {return;}
+																																																																																																																																										} else {return;}
+																																																																																																																																									} else {return;}
+																																																																																																																																								} else {return;}
+																																																																																																																																							} else {return;}
+																																																																																																																																						} else {return;}
+																																																																																																																																					} else {return;}
+																																																																																																																																				} else {return;}
+																																																																																																																																			} else {return;}
+																																																																																																																																		} else {return;}
+																																																																																																																																	} else {return;}
+																																																																																																																																} else {return;}
+																																																																																																																															} else {return;}
+																																																																																																																														} else {return;}
+																																																																																																																													} else {return;}
+																																																																																																																												} else {return;}
+																																																																																																																											} else {return;}
+																																																																																																																										} else {return;}
+																																																																																																																									} else {return;}
+																																																																																																																								} else {return;}
+																																																																																																																							} else {return;}
+																																																																																																																						} else {return;}
+																																																																																																																					} else {return;}
+																																																																																																																				} else {return;}
+																																																																																																																			} else {return;}
+																																																																																																																		} else {return;}
+																																																																																																																	} else {return;}
+																																																																																																																} else {return;}
+																																																																																																															} else {return;}
+																																																																																																														} else {return;}
+																																																																																																													} else {return;}
+																																																																																																												} else {return;}
+																																																																																																											} else {return;}
+																																																																																																										} else {return;}
+																																																																																																									} else {return;}
+																																																																																																								} else {return;}
+																																																																																																							} else {return;}
+																																																																																																						} else {return;}
+																																																																																																					} else {return;}
+																																																																																																				} else {return;}
+																																																																																																			} else {return;}
+																																																																																																		} else {return;}
+																																																																																																	} else {return;}
+																																																																																																} else {return;}
+																																																																																															} else {return;}
+																																																																																														} else {return;}
+																																																																																													} else {return;}
+																																																																																												} else {return;}
+																																																																																											} else {return;}
+																																																																																										} else {return;}
+																																																																																									} else {return;}
+																																																																																								} else {return;}
+																																																																																							} else {return;}
+																																																																																						} else {return;}
+																																																																																					} else {return;}
+																																																																																				} else {return;}
+																																																																																			} else {return;}
 																																																																																		} else {return;}
 																																																																																	} else {return;}
 																																																																																} else {return;}
@@ -456,6 +792,8 @@ public class train {
 					} else {return;}
 				} else {return;}
 			} else {return;}
+		
+		//System.out.println(correctPath);
 		}
 	
 	@Override
@@ -464,9 +802,5 @@ public class train {
 				+ isAlive + ", destination=" + destination + "]";
 	}
 
-	public static void main(String[] args) {
-		train train = new train("Train1", "S1-1", true, "S1-2");
-		System.out.println(train.toString());
-	}
 
 }
