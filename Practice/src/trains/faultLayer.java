@@ -20,16 +20,15 @@ public class faultLayer {
 	
 	public int findTrack(String id) {
 		for(int i = 0; i < jsonTracks.jsonParsetrack_data.data.size(); i++) {
-			if(jsonTracks.jsonParsetrack_data.data.get(i).getTrack().gettrackid() == id)
+			if(jsonTracks.jsonParsetrack_data.data.get(i).getTrack().gettrackid().equals(id))
 				return i;
 		}
 		//failed
 		return (-1);
-
 	}
 	public int findSwitch(String id) {
 		for(int i = 0; i < jsonTracks.jsonParsetrack_data.data.size(); i++) {
-			if(jsonSwitches.jsonParseswitches_data.data.get(i).getSwitches().getSwitchId() == id)
+			if(jsonSwitches.jsonParseswitches_data.data.get(i).getSwitches().getSwitchId().equals(id))
 				return i;
 		}
 		//failed
@@ -38,7 +37,7 @@ public class faultLayer {
 	}
 	public int findStation(String id) {
 		for(int i = 0; i < jsonStations.jsonParsestations_data.data.size(); i++) {
-			if(jsonStations.jsonParsestations_data.data.get(i).getStation().getStationId() == id)
+			if(jsonStations.jsonParsestations_data.data.get(i).getStation().getStationId().equals(id))
 				return i;
 		}
 		//failed
