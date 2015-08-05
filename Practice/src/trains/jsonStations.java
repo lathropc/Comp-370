@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 public class jsonStations {
 	
 	public static final String TAG = jsonStations.class.getSimpleName();
-	String json = "{results:[{\"track\":{\"supplier_catalog_id\": \"139\",\"distributor_id\": \"57\",\"distributor_asking_price\": \"999.99\",\"supplier_id\": null,\"product_name\": \"jjjjjjjj j j j j j j  jj j jjjjjjjjjjjj\",\"product_description\": \"kkkkkkkkkkkkkk k k  k k\"},\"image_details\": {\"isCustomImageProvided\": 0,\"isImageUploadedTo\": 1}}]}";
+	String json = "{stations:[{\"station\":{\"stationid\": \"Boston\",\"trackid1\": \"S1-1\",\"trackid2\": \"S1-2\",\"trackid3\": \"S1-3\",\"trackid4\": \"S1-4\",\"isalive\": \"Y\"}},{\"station\":{\"stationid\": \"Alewife\",\"trackid1\": \"S5-1\",\"trackid2\": \"S5-2\",\"trackid3\": \"null\",\"trackid4\": \"null\",\"isalive\": \"Y\"}},{\"station\":{\"stationid\": \"Meford\",\"trackid1\": \"S10-1\",\"trackid2\": \"S10-2\",\"trackid3\": \"null\",\"trackid4\": \"null\",\"isalive\": \"Y\"}},{\"station\":{\"stationid\": \"Melrose\",\"trackid1\": \"S19-1\",\"trackid2\": \"S19-2\",\"trackid3\": \"null\",\"trackid4\": \"null\",\"isalive\": \"Y\"}},{\"station\":{\"stationid\":\"Stoneham\",\"trackid1\":\"S25-1\",\"trackid2\":\"S25-2\",\"trackid3\":\"S25-3\",\"trackid4\":\"null\",\"isalive\":\"Y\"}},{\"station\":{\"stationid\":\"Reading\",\"trackid1\":\"S29-1\",\"trackid2\": \"S29-2\",\"trackid3\": \"null\",\"trackid4\": \"null\",\"isalive\": \"Y\"}}]}";
 	JsonParsestations_data jsonParsestations_data = new Gson().fromJson(json, JsonParsestations_data.class);
 	
 	public void setupData() {
@@ -24,7 +24,7 @@ public class jsonStations {
 	
 	public class JsonParsestations_data {
 		
-		@SerializedName("station_data") List<Station_data> data;
+		@SerializedName("stations") List<Station_data> data;
 
         public JsonParsestations_data(List<Station_data> data) {
             super();
@@ -137,7 +137,7 @@ public class jsonStations {
 		
 		@Override 
 		public String toString() {
-			return "stations [  ]";
+			return "stations [stationid = " + stationid + " trackid1 = " + trackid1 + " trackid2 = " + trackid2 + " trackid3 = " + trackid3 + " trackid4 = " + trackid4 + " ]";
 		}
 	}
 	

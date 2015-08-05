@@ -127,7 +127,10 @@ public class train {
 			path = getPosttrack1(location);
 			correctPath.add(path);
 			if(getPosttrack1(path) != destination) {
-				path = getPosttrack1(path);
+				System.out.println("Path " + path);
+				String trystr = faultLayer.getTrackposttrack1(path);
+				System.out.println("try" + trystr);
+				//path = getPosttrack1(path);
 				correctPath.add(path);
 				if(getPosttrack1(path) != destination) {
 					path = getPosttrack1(path);

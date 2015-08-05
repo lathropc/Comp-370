@@ -20,6 +20,7 @@ public class faultLayer {
 	
 	public int findTrack(String id) {
 		for(int i = 0; i < jsonTracks.jsonParsetrack_data.data.size(); i++) {
+			//System.out.println("String id = " + id + " json id = " + jsonTracks.jsonParsetrack_data.data.get(i).getTrack().gettrackid());
 			if(jsonTracks.jsonParsetrack_data.data.get(i).getTrack().gettrackid().equals(id))
 				return i;
 		}

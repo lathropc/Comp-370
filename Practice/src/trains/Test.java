@@ -18,7 +18,11 @@ public class Test {
 		faultLayer.setupTracks();
 		faultLayer.setupSwitches();
 		faultLayer.setupStations();
+
+		System.out.println(faultLayer.getTrackposttrack1("S1-1"));
 		
+		String str = faultLayer.getTrackposttrack1("S1-1");
+		System.out.println(str);
 		
 		train.planPath();
 		
