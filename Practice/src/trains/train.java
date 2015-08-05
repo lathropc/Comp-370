@@ -12,16 +12,14 @@ public class train {
 	faultLayer faultLayer = new faultLayer();
 
 	public train(String id, String location, boolean isAlive, String destination) {
-		System.out.println("We here 1");
-		this.id = id;
 		
-		System.out.println(faultLayer.getTrackisallocated("S1-1"));
+		this.id = id;
 
-//		if(faultLayer.getTrackisallocated(location) == false) {
-//			this.location = location;
-//			faultLayer.setTrackisallocated(location, true);
-//		}
-		System.out.println("We here 2");
+		if(faultLayer.getTrackisallocated(location) == false) {
+			this.location = location;
+			faultLayer.setTrackisallocated(location, true);
+		}
+		
 
 		this.isAlive = isAlive;
 		
@@ -64,21 +62,25 @@ public class train {
 								//wait
 							} else {
 								faultLayer.setTrackisallocated(track4, true);
+								faultLayer.getTrackId4(destination);
 							}
 						} else {
 							//wait
 						}
 					} else {
 						faultLayer.setTrackisallocated(track3, true);
+						faultLayer.getTrackId3(destination);
 					}
 				} else {
 					//wait
 				}
 			} else {
 				faultLayer.setTrackisallocated(track2, true);
+				faultLayer.getTrackId2(destination);
 			}
 		} else {
 			faultLayer.setTrackisallocated(track1, true);
+			faultLayer.getTrackId1(destination);
 		}
 	}
 
@@ -106,30 +108,35 @@ public class train {
 		return faultLayer.getTrackpretrack2(location);
 	}
 	
-	public String getPosttrack1(String newLocation) {
-		return faultLayer.getTrackposttrack1(newLocation);
+	public String getPosttrack1(String location) {
+		return faultLayer.getTrackposttrack1(location);
 	}
 	
-	public String getPosttrack2(String newLocation) {
-		return faultLayer.getTrackposttrack1(newLocation);
+	public String getPosttrack2(String locatoin) {
+		return faultLayer.getTrackposttrack1(location);
 	}
 	
 	public void planPath() {
 		
-		String path = location;
+		String path;
 		ArrayList<String> correctPath = new ArrayList<String>(); 
-		
+		System.out.println("Starting location" +location);
 		//first
 		if(getPosttrack1(location) != destination) {
 			path = getPosttrack1(location);
-			System.out.println(getPosttrack1(location));
+			System.out.println("Path is : " +path);
 			correctPath.add(path);
+			System.out.println(correctPath);
 			if(getPosttrack1(path) != destination) {
+				System.out.println("initial Path is : " +path);
 				path = getPosttrack1(path);
+				System.out.println("Path is : " +path);
 				correctPath.add(path);
+				System.out.println(correctPath);
 				if(getPosttrack1(path) != destination) {
 					path = getPosttrack1(path);
 					correctPath.add(path);
+					System.out.println(correctPath);
 					if(getPosttrack1(path) != destination) {
 						path = getPosttrack1(path);
 						correctPath.add(path);
@@ -793,7 +800,7 @@ public class train {
 				} else {return;}
 			} else {return;}
 		
-		//System.out.println(correctPath);
+		System.out.println(correctPath);
 		}
 	
 	@Override
