@@ -3,20 +3,16 @@ package trains;
 public class faultLayer {
 	
 	jsonTracks jsonTracks = new jsonTracks();
-	jsonStations jsonStations = new jsonStations();
 	jsonSwitches jsonSwitches = new jsonSwitches();
-
+	jsonStations jsonStations = new jsonStations();
 
 	public void setupTracks() {
 		jsonTracks.setupData(); // Init data from track json file, prints them.
-		System.out.println(jsonTracks.jsonParsetrack_data.data.get(0).getTrack().gettrackid());
 	}
-	
-	public void setupSwitches() {
+    public void setupSwitches() {
 		jsonSwitches.setupData();
 	}
-	
-	public void setupStations() {
+    public void setupStations() {
 		jsonStations.setupData();
 	}
 	
