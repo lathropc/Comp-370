@@ -8,24 +8,22 @@ public class Test {
 
 	public static void main(String[] args) {
 
-
+		System.out.println("TRAIN SIMULATOR");
 		
-		train train = new train("First Train", "S1-1", true, "S5-1");
-		
-		
-		
+		// Init fault layer, communicate with JSON files
 		faultLayer faultLayer = new faultLayer();
 		faultLayer.setupTracks();
 		faultLayer.setupSwitches();
 		faultLayer.setupStations();
+		System.out.println("\nJSON FILES LOADED");
 
-		System.out.println(faultLayer.getTrackposttrack1("S1-1"));
+		//Create Trains
+		train train = new train("First Train", "S1-1", true, "S5-1");
+		System.out.println("Train: First Train created");
 		
-		String str = faultLayer.getTrackposttrack1("S1-1");
-		System.out.println(str);
-		
+		System.out.println("First Train : Plan path to station");
 		train.planPath();
-		
+		//train.executePath();
 		
 	}
 }

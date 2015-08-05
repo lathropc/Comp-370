@@ -139,21 +139,17 @@ public class train {
 		
 		
 		
-		System.out.println("Starting location" +location);
+		System.out.println("Starting location " + location + " Destination " + destination);
 		//first
 		if(!getPosttrack1(location).equals(destination)) {
 			path = getPosttrack1(location);
 			correctPath.add(path);
 			if(!getPosttrack1(path).equals(destination)) {
-				System.out.println("Path " + path);
-				String trystr = faultLayer.getTrackposttrack1(path);
-				System.out.println("try" + trystr);
-				//path = getPosttrack1(path);
+				path = getPosttrack1(path);
 				correctPath.add(path);
 				if(!getPosttrack1(path).equals(destination)) {
 					path = getPosttrack1(path);
 					correctPath.add(path);
-					System.out.println(correctPath);
 					if(!getPosttrack1(path).equals(destination)) {
 						path = getPosttrack1(path);
 						correctPath.add(path);
@@ -656,166 +652,166 @@ public class train {
 																																																																																																																																																																	if(!getPosttrack2(path).equals(destination)) {
 																																																																																																																																																																		correctPath.clear();
 																																																																																																																																																																		System.out.println("Something is wrong");
-																																																																																																																																																																		} else {return;}
-																																																																																																																																																																	} else {return;}
-																																																																																																																																																																} else {return;}
-																																																																																																																																																															} else {return;}
-																																																																																																																																																														} else {return;}
-																																																																																																																																																													} else {return;}
-																																																																																																																																																												} else {return;}
-																																																																																																																																																											} else {return;}
-																																																																																																																																																										} else {return;}
-																																																																																																																																																									} else {return;}
-																																																																																																																																																								} else {return;}
-																																																																																																																																																							} else {return;}
-																																																																																																																																																						} else {return;}
-																																																																																																																																																					} else {return;}
-																																																																																																																																																				} else {return;}
-																																																																																																																																																			} else {return;}
-																																																																																																																																																		} else {return;}
-																																																																																																																																																	} else {return;}
-																																																																																																																																																} else {return;}
-																																																																																																																																															} else {return;}
-																																																																																																																																														} else {return;}
-																																																																																																																																													} else {return;}
-																																																																																																																																												} else {return;}
-																																																																																																																																											} else {return;}
-																																																																																																																																										} else {return;}
-																																																																																																																																									} else {return;}
-																																																																																																																																								} else {return;}
-																																																																																																																																							} else {return;}
-																																																																																																																																						} else {return;}
-																																																																																																																																					} else {return;}
-																																																																																																																																				} else {return;}
-																																																																																																																																			} else {return;}
-																																																																																																																																		} else {return;}
-																																																																																																																																	} else {return;}
-																																																																																																																																} else {return;}
-																																																																																																																															} else {return;}
-																																																																																																																														} else {return;}
-																																																																																																																													} else {return;}
-																																																																																																																												} else {return;}
-																																																																																																																											} else {return;}
-																																																																																																																										} else {return;}
-																																																																																																																									} else {return;}
-																																																																																																																								} else {return;}
-																																																																																																																							} else {return;}
-																																																																																																																						} else {return;}
-																																																																																																																					} else {return;}
-																																																																																																																				} else {return;}
-																																																																																																																			} else {return;}
-																																																																																																																		} else {return;}
-																																																																																																																	} else {return;}
-																																																																																																																} else {return;}
-																																																																																																															} else {return;}
-																																																																																																														} else {return;}
-																																																																																																													} else {return;}
-																																																																																																												} else {return;}
-																																																																																																											} else {return;}
-																																																																																																										} else {return;}
-																																																																																																									} else {return;}
-																																																																																																								} else {return;}
-																																																																																																							} else {return;}
-																																																																																																						} else {return;}
-																																																																																																					} else {return;}
-																																																																																																				} else {return;}
-																																																																																																			} else {return;}
-																																																																																																		} else {return;}
-																																																																																																	} else {return;}
-																																																																																																} else {return;}
-																																																																																															} else {return;}
-																																																																																														} else {return;}
-																																																																																													} else {return;}
-																																																																																												} else {return;}
-																																																																																											} else {return;}
-																																																																																										} else {return;}
-																																																																																									} else {return;}
-																																																																																								} else {return;}
-																																																																																							} else {return;}
-																																																																																						} else {return;}
-																																																																																					} else {return;}
-																																																																																				} else {return;}
-																																																																																			} else {return;}
-																																																																																		} else {return;}
-																																																																																	} else {return;}
-																																																																																} else {return;}
-																																																																															} else {return;}
-																																																																														} else {return;}
-																																																																													} else {return;}
-																																																																												} else {return;}
-																																																																											} else {return;}
-																																																																										} else {return;}
-																																																																									} else {return;}
-																																																																								} else {return;}
-																																																																							} else {return;}
-																																																																						} else {return;}
-																																																																					} else {return;}
-																																																																				} else {return;}
-																																																																			} else {return;}
-																																																																		} else {return;}
-																																																																	} else {return;}
-																																																																} else {return;}
-																																																															} else {return;}
-																																																														} else {return;}
-																																																													} else {return;}
-																																																												} else {return;}
-																																																											} else {return;}
-																																																										} else {return;}
-																																																									} else {return;}
-																																																								} else {return;}
-																																																							} else {return;}
-																																																						} else {return;}
-																																																					} else {return;}
-																																																				} else {return;}
-																																																			} else {return;}
-																																																		} else {return;}
-																																																	} else {return;}
-																																																} else {return;}
-																																															} else {return;}
-																																														} else {return;}
-																																													} else {return;}
-																																												} else {return;}
-																																											} else {return;}
-																																										} else {return;}
-																																									} else {return;}
-																																								} else {return;}
-																																							} else {return;}
-																																						} else {return;}
-																																					} else {return;}
-																																				} else {return;}
-																																			} else {return;}
-																																		} else {return;}
-																																	} else {return;}
-																																} else {return;}
-																															} else {return;}
-																														} else {return;}
-																													} else {return;}
-																												} else {return;}
-																											} else {return;}
-																										} else {return;}
-																									} else {return;}
-																								} else {return;}
-																							} else {return;}
-																						} else {return;}
-																					} else {return;}
-																				} else {return;}
-																			} else {return;}
-																		} else {return;}
-																	} else {return;}
-																} else {return;}
-															} else {return;}
-														} else {return;}
-													} else {return;}
-												} else {return;}
-											} else {return;}
-										} else {return;}
-									} else {return;}
-								} else {return;}
-							} else {return;}
-						} else {return;}
-					} else {return;}
-				} else {return;}
-			} else {return;}
+																																																																																																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																																} else {System.out.println("PATH FOUND");;}
+																																																																															} else {System.out.println("PATH FOUND");;}
+																																																																														} else {System.out.println("PATH FOUND");;}
+																																																																													} else {System.out.println("PATH FOUND");;}
+																																																																												} else {System.out.println("PATH FOUND");;}
+																																																																											} else {System.out.println("PATH FOUND");;}
+																																																																										} else {System.out.println("PATH FOUND");;}
+																																																																									} else {System.out.println("PATH FOUND");;}
+																																																																								} else {System.out.println("PATH FOUND");;}
+																																																																							} else {System.out.println("PATH FOUND");;}
+																																																																						} else {System.out.println("PATH FOUND");;}
+																																																																					} else {System.out.println("PATH FOUND");;}
+																																																																				} else {System.out.println("PATH FOUND");;}
+																																																																			} else {System.out.println("PATH FOUND");;}
+																																																																		} else {System.out.println("PATH FOUND");;}
+																																																																	} else {System.out.println("PATH FOUND");;}
+																																																																} else {System.out.println("PATH FOUND");;}
+																																																															} else {System.out.println("PATH FOUND");;}
+																																																														} else {System.out.println("PATH FOUND");;}
+																																																													} else {System.out.println("PATH FOUND");;}
+																																																												} else {System.out.println("PATH FOUND");;}
+																																																											} else {System.out.println("PATH FOUND");;}
+																																																										} else {System.out.println("PATH FOUND");;}
+																																																									} else {System.out.println("PATH FOUND");;}
+																																																								} else {System.out.println("PATH FOUND");;}
+																																																							} else {System.out.println("PATH FOUND");;}
+																																																						} else {System.out.println("PATH FOUND");;}
+																																																					} else {System.out.println("PATH FOUND");;}
+																																																				} else {System.out.println("PATH FOUND");;}
+																																																			} else {System.out.println("PATH FOUND");;}
+																																																		} else {System.out.println("PATH FOUND");;}
+																																																	} else {System.out.println("PATH FOUND");;}
+																																																} else {System.out.println("PATH FOUND");;}
+																																															} else {System.out.println("PATH FOUND");;}
+																																														} else {System.out.println("PATH FOUND");;}
+																																													} else {System.out.println("PATH FOUND");;}
+																																												} else {System.out.println("PATH FOUND");;}
+																																											} else {System.out.println("PATH FOUND");;}
+																																										} else {System.out.println("PATH FOUND");;}
+																																									} else {System.out.println("PATH FOUND");;}
+																																								} else {System.out.println("PATH FOUND");;}
+																																							} else {System.out.println("PATH FOUND");;}
+																																						} else {System.out.println("PATH FOUND");;}
+																																					} else {System.out.println("PATH FOUND");;}
+																																				} else {System.out.println("PATH FOUND");;}
+																																			} else {System.out.println("PATH FOUND");;}
+																																		} else {System.out.println("PATH FOUND");;}
+																																	} else {System.out.println("PATH FOUND");;}
+																																} else {System.out.println("PATH FOUND");;}
+																															} else {System.out.println("PATH FOUND");;}
+																														} else {System.out.println("PATH FOUND");;}
+																													} else {System.out.println("PATH FOUND");;}
+																												} else {System.out.println("PATH FOUND");;}
+																											} else {System.out.println("PATH FOUND");;}
+																										} else {System.out.println("PATH FOUND");;}
+																									} else {System.out.println("PATH FOUND");;}
+																								} else {System.out.println("PATH FOUND");;}
+																							} else {System.out.println("PATH FOUND");;}
+																						} else {System.out.println("PATH FOUND");;}
+																					} else {System.out.println("PATH FOUND");;}
+																				} else {System.out.println("PATH FOUND");;}
+																			} else {System.out.println("PATH FOUND");;}
+																		} else {System.out.println("PATH FOUND");;}
+																	} else {System.out.println("PATH FOUND");;}
+																} else {System.out.println("PATH FOUND");;}
+															} else {System.out.println("PATH FOUND");;}
+														} else {System.out.println("PATH FOUND");;}
+													} else {System.out.println("PATH FOUND");;}
+												} else {System.out.println("PATH FOUND");;}
+											} else {System.out.println("PATH FOUND");;}
+										} else {System.out.println("PATH FOUND");;}
+									} else {System.out.println("PATH FOUND");;}
+								} else {System.out.println("PATH FOUND");;}
+							} else {System.out.println("PATH FOUND");;}
+						} else {System.out.println("PATH FOUND");;}
+					} else {System.out.println("PATH FOUND");;}
+				} else {System.out.println("PATH FOUND");;}
+			} else {System.out.println("PATH FOUND");;}
 		
 		System.out.println(correctPath);
 		}
@@ -824,6 +820,12 @@ public class train {
 	public String toString() {
 		return "train [id=" + id + ", location=" + location + ", isAlive="
 				+ isAlive + ", destination=" + destination + "]";
+	}
+
+	public void executePath() {
+		Tracks tracks = new Tracks();
+		tracks.executePath();
+		
 	}
 }
 
