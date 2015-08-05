@@ -175,6 +175,7 @@ public class jsonSwitches {
 		@Override 
 		public String toString() {
 			return "stations [switchid = " +switchid+ "pretrack1 = " +pretrack1+ "pretrack2 = " +pretrack2+ "posttrack1 = " +posttrack1+ "postrack2 = " +posttrack2+ "isallocated = " +isallocated+ "isalive = " +isalive+ " Pointing at " + pointingat +"]";
+
 		}
 	}
 	

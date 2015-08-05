@@ -18,7 +18,7 @@ public class jsonStations {
                 System.out.println(TAG + "Station_data: " + data.toString());
             }
         } else {
-        	System.out.println("Station data is borked");
+        	System.out.println("\nStation data is borked\n");
         }
 	}
 	
@@ -138,7 +138,11 @@ public class jsonStations {
 		@Override 
 		public String toString() {
 			return "stations [stationid = " + stationid + " trackid1 = " + trackid1 + " trackid2 = " + trackid2 + " trackid3 = " + trackid3 + " trackid4 = " + trackid4 + " ]";
+
 		}
+
+		} 
+
 	}
 	
-}
+
