@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 public class jsonSwitches {
 	
 	public static final String TAG = jsonSwitches.class.getSimpleName();
-	String json = "{switch:[{\"switches\":{\"switchid\": \"SW-1\",\"pretrack1\": \"S2-1\",\"pretrack2\": \"S2-2\",\"posttrack1\": \"S3-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-2\",\"pretrack1\": \"S2-3\",\"pretrack2\": \"S2-4\",\"posttrack1\": \"S3-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-3\",\"pretrack1\": \"S3-1\",\"pretrack2\": \"S3-2\",\"posttrack1\": \"S4-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-4\",\"pretrack1\": \"S3-1\",\"pretrack2\": \"S3-2\",\"posttrack1\": \"S4-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-5\",\"pretrack1\": \"S4-1\",\"pretrack2\": \"S4-2\",\"posttrack1\": \"S5-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-6\",\"pretrack1\": \"S4-1\",\"pretrack2\": \"S4-2\",\"posttrack1\": \"S5-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-7\",\"pretrack1\": \"S6-1\",\"pretrack2\": \"S6-2\",\"posttrack1\": \"S7-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-8\",\"pretrack1\": \"S7-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S8-1\",\"posttrack2\": \"S8-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-9\",\"pretrack1\": \"S8-1\",\"pretrack2\": \"S8-2\",\"posttrack1\": \"S9-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-10\",\"pretrack1\": \"S9-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S10-1\",\"posttrack2\": \"S1-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-11\",\"pretrack1\": \"S10-1\",\"pretrack2\": \"S10-2\",\"posttrack1\": \"S11-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-14\",\"pretrack1\": \"S18-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S19-1\",\"posttrack2\": \"S19-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-15\",\"pretrack1\": \"S19-1\",\"pretrack2\": \"S19-2\",\"posttrack1\": \"S20-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-16\",\"pretrack1\": \"S21-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S22-1\",\"posttrack2\": \"S22-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-17\",\"pretrack1\": \"S22-1\",\"pretrack2\": \"S22-2\",\"posttrack1\": \"S23-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-18\",\"pretrack1\": \"S23-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S25-1\",\"posttrack2\": \"S25-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-19\",\"pretrack1\": \"S24-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S25-2\",\"posttrack2\": \"S25-3\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-20\",\"pretrack1\": \"S25-2\",\"pretrack2\": \"S25-3\",\"posttrack1\": \"S26-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\"}},{\"switches\": {\"switchid\": \"SW-21\",\"pretrack1\": \"S28-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S29-1\",\"posttrack2\": \"S29-2\",\"isallocated\": \"N\",\"isalive\": \"Y\"}}]}";	
+	String json = "{switch:[{\"switches\":{\"switchid\": \"SW-1\",\"pretrack1\": \"S2-1\",\"pretrack2\": \"S2-2\",\"posttrack1\": \"S3-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-2\",\"pretrack1\": \"S2-3\",\"pretrack2\": \"S2-4\",\"posttrack1\": \"S3-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-3\",\"pretrack1\": \"S3-1\",\"pretrack2\": \"S3-2\",\"posttrack1\": \"S4-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-4\",\"pretrack1\": \"S3-1\",\"pretrack2\": \"S3-2\",\"posttrack1\": \"S4-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-5\",\"pretrack1\": \"S4-1\",\"pretrack2\": \"S4-2\",\"posttrack1\": \"S5-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-6\",\"pretrack1\": \"S4-1\",\"pretrack2\": \"S4-2\",\"posttrack1\": \"S5-2\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-7\",\"pretrack1\": \"S6-1\",\"pretrack2\": \"S6-2\",\"posttrack1\": \"S7-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-8\",\"pretrack1\": \"S7-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S8-1\",\"posttrack2\": \"S8-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-9\",\"pretrack1\": \"S8-1\",\"pretrack2\": \"S8-2\",\"posttrack1\": \"S9-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-10\",\"pretrack1\": \"S9-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S10-1\",\"posttrack2\": \"S1-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-11\",\"pretrack1\": \"S10-1\",\"pretrack2\": \"S10-2\",\"posttrack1\": \"S11-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-14\",\"pretrack1\": \"S18-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S19-1\",\"posttrack2\": \"S19-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-15\",\"pretrack1\": \"S19-1\",\"pretrack2\": \"S19-2\",\"posttrack1\": \"S20-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-16\",\"pretrack1\": \"S21-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S22-1\",\"posttrack2\": \"S22-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-17\",\"pretrack1\": \"S22-1\",\"pretrack2\": \"S22-2\",\"posttrack1\": \"S23-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-18\",\"pretrack1\": \"S23-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S25-1\",\"posttrack2\": \"S25-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-19\",\"pretrack1\": \"S24-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S25-2\",\"posttrack2\": \"S25-3\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-20\",\"pretrack1\": \"S25-2\",\"pretrack2\": \"S25-3\",\"posttrack1\": \"S26-1\",\"posttrack2\": \"null\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}},{\"switches\": {\"switchid\": \"SW-21\",\"pretrack1\": \"S28-1\",\"pretrack2\": \"null\",\"posttrack1\": \"S29-1\",\"posttrack2\": \"S29-2\",\"isallocated\": \"N\",\"isalive\": \"Y\",\"pointingat\": \"null\"}}]}";	
 	JsonParseswitches_data jsonParseswitches_data = new Gson().fromJson(json, JsonParseswitches_data.class);
 
 	public void setupData() {
@@ -90,9 +90,12 @@ public class jsonSwitches {
 		@SerializedName("isalive")
 		private Boolean isalive;
 		
+		@SerializedName("pointingat")
+		private String pointingat;
 		
 		
-		public switches(String switchid, String pretrack1, String pretrack2, String posttrack1, String posttrack2, Boolean isalive, Boolean isallocated) {
+		
+		public switches(String switchid, String pretrack1, String pretrack2, String posttrack1, String posttrack2, Boolean isalive, Boolean isallocated, String pointingat) {
 			super();
 			this.switchid = switchid;
 			this.pretrack1 = pretrack1;
@@ -101,6 +104,7 @@ public class jsonSwitches {
 			this.posttrack2 = posttrack2;
 			this.isalive = isalive;
 			this.isallocated = isallocated;
+			this.pointingat = pointingat;
 		}
 		
 		public String getSwitchId() {
@@ -159,9 +163,18 @@ public class jsonSwitches {
 			this.isalive = isalive;
 		}
 		
+		public String getpointingat() {
+			return pointingat;
+		}
+		
+		public void setpointingat(String pointingat) {
+			this.pointingat = pointingat;
+		}
+		
+		
 		@Override 
 		public String toString() {
-			return "stations [switchid = " +switchid+ "pretrack1 = " +pretrack1+ "pretrack2 = " +pretrack2+ "posttrack1 = " +posttrack1+ "postrack2 = " +posttrack2+ "isallocated = " +isallocated+ "isalive = " +isalive+  "]";
+			return "stations [switchid = " +switchid+ "pretrack1 = " +pretrack1+ "pretrack2 = " +pretrack2+ "posttrack1 = " +posttrack1+ "postrack2 = " +posttrack2+ "isallocated = " +isallocated+ "isalive = " +isalive+ " Pointing at " + pointingat +"]";
 		}
 	}
 	

@@ -150,6 +150,21 @@ public class faultLayer {
     	int tk = findSwitch(id);
         jsonSwitches.jsonParseswitches_data.data.get(tk).getSwitches().setisalive(isalive);
     }
+    public String getSwitchpointingat(String id) {
+    	int tk = findSwitch(id);
+    	if(tk < 0){
+        	System.out.println("Incorrect ID");
+        	return "FALSE ID";
+        } else
+        	 return jsonSwitches.jsonParseswitches_data.data.get(tk).getSwitches().getpointingat();
+    }
+    public void setSwitchpointingat(String id, String pointingat) {
+    	int tk = findSwitch(id);
+    	if(tk < 0){
+        	System.out.println("Incorrect ID");
+        } else
+        	 jsonSwitches.jsonParseswitches_data.data.get(tk).getSwitches().setpointingat(pointingat);
+    }
 
     //Station accessors and mutators
     
