@@ -28,6 +28,21 @@ public class train {
 		routine.act(this, tracks);
 	}
 	
+	public void handleSwitches(ArrayList<String> correctPath){
+		for(int i = 0; i < correctPath.size(); i++){
+			for(int a = 1; a < 22; a++){
+				
+				if(((faultLayer.getSwitchpretrack1("SW-" + a).equals(correctPath[0])) && (faultLayer.getSwitchposttrack1("SW-" + a).equals(correctPath[0]))) ||
+						((faultLayer.getSwitchpretrack1("SW-" + a).equals(correctPath[0])) && (faultLayer.getSwitchposttrack2("SW-" + a).equals(correctPath[0]))) ||
+							((faultLayer.getSwitchpretrack2("SW-" + a).equals(correctPath[0])) && (faultLayer.getSwitchposttrack1("SW-" + a).equals(correctPath[0]))) ||
+								((faultLayer.getSwitchpretrack2("SW-" + a).equals(correctPath[0])) && (faultLayer.getSwitchposttrack2("SW-" + a).equals(correctPath[0])))){
+					//TODO: ensure switch is set to the right place, add to switch array
+					System.out.println("SW-" + a + " Is in our path, switching accordingly");
+				}
+			}
+		}
+	}
+	
 	public int getX() {
 		return x;
 	}
