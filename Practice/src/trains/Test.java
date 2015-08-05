@@ -7,12 +7,21 @@ package trains;
 public class Test {
 
 	public static void main(String[] args) {
-		 System.out.println("INIT FAULT LAYER");
-		faultLayer faultLayer = new faultLayer();
-		 System.out.println("OK");
 
+
+		
+		train train = new train("First Train", "S1-1", true, "S5-1");
+		
+		
+		
+		faultLayer faultLayer = new faultLayer();
 		faultLayer.setupTracks();
 		faultLayer.setupSwitches();
 		faultLayer.setupStations();
+		
+		
+		train.planPath();
+		
+		
 	}
 }

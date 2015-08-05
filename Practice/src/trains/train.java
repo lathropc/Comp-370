@@ -8,6 +8,7 @@ public class train {
 	public String location;
 	public boolean isAlive;
 	public String destination;
+	public String path;
 	
 	faultLayer faultLayer = new faultLayer();
 
@@ -118,21 +119,16 @@ public class train {
 	
 	public void planPath() {
 		
-		String path;
+		
 		ArrayList<String> correctPath = new ArrayList<String>(); 
 		System.out.println("Starting location" +location);
 		//first
 		if(getPosttrack1(location) != destination) {
 			path = getPosttrack1(location);
-			System.out.println("Path is : " +path);
 			correctPath.add(path);
-			System.out.println(correctPath);
 			if(getPosttrack1(path) != destination) {
-				System.out.println("initial Path is : " +path);
 				path = getPosttrack1(path);
-				System.out.println("Path is : " +path);
 				correctPath.add(path);
-				System.out.println(correctPath);
 				if(getPosttrack1(path) != destination) {
 					path = getPosttrack1(path);
 					correctPath.add(path);
